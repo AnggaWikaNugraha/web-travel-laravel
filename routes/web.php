@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// prefix untuk akses url localhost/admin/
+// namespace untuk memanggil namespsenya
+
+Route::prefix('admin')
+->namespace('Admin')
+->group(function(){
+      Route::get('/' , 'DasboardController@index')
+      ->name('dasboard');
+});
