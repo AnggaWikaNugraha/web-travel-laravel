@@ -1,0 +1,181 @@
+body {
+  font-family: 'Assistant', sans-serif;
+  background-color: #ffffff;
+  color: #071C4D;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: #fefefe;
+  border-radius: 15px;
+  opacity: 50%;
+}
+
+.navbar-light .navbar-nav .active {
+  color: white !important;
+}
+
+.navbar-light .navbar-nav .active:hover {
+  color: black !important;
+}
+
+.btn-login {
+  border: 2px solid black;
+  border-radius: 15px;
+  color: white;
+}
+
+.btn-login.btn-login:hover {
+  background-color: black;
+  color: #ffffff;
+  border: 2px solid #050505;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.section-detail-header {
+  background-color: #051334;
+  min-height: 340px;
+  margin-top: -70px;
+}
+
+.section-details-content {
+  margin-top: -250px;
+}
+
+.section-details-content .breadcrumb-item {
+  color: white;
+}
+
+.card-details {
+  padding: 30px;
+  border-radius: 11px;
+}
+
+.card-details h1 {
+  font-family: Assistant;
+  font-size: 26px;
+}
+
+.card-details p {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.card-details h2 {
+  font-family: Assistant;
+  font-size: 20px;
+}
+
+.card-details .features {
+  margin-top: 20px;
+}
+
+.card-details .features h3 {
+  font-size: 18px;
+  color: #071C4D;
+  margin-bottom: 0;
+}
+
+.card-details .features p {
+  margin-bottom: 0;
+}
+
+.card-details .features .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.card-details .features .description .features-images {
+  width: 45px;
+  height: 45px;
+}
+
+.card-details .gallery .xzoom-container {
+  display: block;
+}
+
+.card-details .gallery .xzoom-container .xzoom {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.card-details .gallery .xzoom-container .xactive {
+  border: 4px solid #1ABC9C;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card-details .xzoom-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-details .xzoom-thumbs .xzoom-gallery {
+  margin: 5px;
+}
+
+.card-detail {
+  padding: 30px;
+}
+
+.card-detail h2 {
+  font-size: 20px;
+  font-family: Assistant;
+}
+
+@media (max-width: 576px) {
+  .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    color: #051334;
+  }
+  .navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #051334;
+  }
+  .dropdown {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    color: #051334;
+  }
+  .navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #051334;
+  }
+  .dropdown {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    color: white;
+  }
+  .navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #051334;
+  }
+  .dropdown {
+    margin-left: 10px;
+  }
+}
+/*# sourceMappingURL=detail.css.map */

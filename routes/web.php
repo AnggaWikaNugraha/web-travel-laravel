@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 // prefix untuk akses url localhost/admin/
 // namespace untuk memanggil namespsenya
 
 Route::prefix('admin')
-->namespace('Admin')
-->group(function(){
-      Route::get('/' , 'DasboardController@index')
-      ->name('dasboard');
-});
+    ->namespace('Admin')
+    ->group(function () {
+        Route::get('/', 'DasboardController@index')
+            ->name('dasboard');
+    });
