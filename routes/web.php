@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('Home');
 Route::get('/detail', 'DetailController@index')->name('Detail');
+Route::get('/checkout', 'CheckoutController@index')->name('Checkout');
 
 // prefix untuk akses url localhost/admin/
 // namespace untuk memanggil namespsenya
