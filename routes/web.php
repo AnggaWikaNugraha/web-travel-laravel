@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('Home');
+Route::get('/detail', 'DetailController@index')->name('Detail');
 
 // prefix untuk akses url localhost/admin/
 // namespace untuk memanggil namespsenya
