@@ -16,8 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('Home');
 Route::get('/detail', 'DetailController@index')->name('Detail');
-Route::get('/checkout', 'CheckoutController@index')->name('Checkout');
-Route::get('/checkout/succes', 'CheckoutController@succes')->name('Checkout-succes');
+// Route::get('/checkout', 'CheckoutController@index')->name('Checkout');
+// Route::get('/checkout/succes', 'CheckoutController@succes')->name('Checkout-succes');
+
+Route::prefix('checkout')
+    ->group(function () {
+        Route::get('/', 'CheckoutController@index')
+            ->name('Checkout');
+        Route::get('/succes', 'CheckoutController@succes')
+            ->name('Checkout-succes');
+    });
 
 // prefix untuk akses url localhost/admin/
 // namespace untuk memanggil namespsenya
