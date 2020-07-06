@@ -220,12 +220,12 @@
 @endsection
 
 @push('addon-style')
-<link rel="stylesheet" href="frontend/libraries/gijgo/css/gijgo.min.css" />
+<link rel="stylesheet" href="{{url('frontend/libraries/gijgo/css/gijgo.min.css')}}" />
 @endpush
 
 @push('addon-script')
-<script src="frontend/libraries/xzoom/dist/xzoom.min.js"></script>
-<script src="frontend/libraries/gijgo/js/gijgo.min.js"></script>
+<script src="{{url('frontend/libraries/xzoom/dist/xzoom.min.js')}}"></script>
+<script src="{{url('frontend/libraries/gijgo/js/gijgo.min.js')}}"></script>
 <script>
   $(document).ready(function() {
     $('.xzoom, .xzoom-gallery').xzoom({
@@ -238,7 +238,7 @@
     $('.datepicker').datepicker({
       uiLibrary: 'bootstrap4',
       icons: {
-        rightIcon: '<img src="frontend/images/ic_doe.png" alt="" />'
+        rightIcon: '<img src="{{url('frontend/images/ic_doe.png')}}" alt="" />'
       }
     });
   });

@@ -10,4 +10,8 @@ class CheckoutController extends Controller
     {
         return view('pages.user.checkout');
     }
+    public function succes(Request $request)
+    {
+        return view('pages.user.succes');
+    }
 }

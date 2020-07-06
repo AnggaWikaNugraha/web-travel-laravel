@@ -168,11 +168,11 @@
 @endsection
 
 @prepend('addon-style')
-    <link rel="stylesheet" href="frontend/libraries/xzoom/dist/xzoom.css" />
+<link rel="stylesheet" href="{{url('frontend/libraries/xzoom/dist/xzoom.css')}}" />
 @endprepend
 
 @push('addon-script')
-<script src="frontend/libraries/xzoom/dist/xzoom.min.js"></script>
+<script src="{{url('frontend/libraries/xzoom/dist/xzoom.min.js')}}"></script>
 <script>
   $(document).ready(function() {
     $('.xzoom, .xzoom-gallery').xzoom({
