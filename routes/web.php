@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +33,9 @@ Route::prefix('checkout')
 
 Route::prefix('admin')
     ->namespace('Admin')
+    ->middleware('auth', 'admin')
     ->group(function () {
         Route::get('/', 'DasboardController@index')
             ->name('dasboard');
     });
+auth::routes();
