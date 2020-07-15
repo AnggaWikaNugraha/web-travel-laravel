@@ -37,6 +37,7 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'DasboardController@index')
             ->name('dasboard');
+        Route::resource('travel-package', 'TravelPackagesController');
     });
-Auth::routes();
+Auth::routes(['verify' => true]);
 
