@@ -16,16 +16,32 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'HomeController@index')->name('Home');
-Route::get('/detail', 'DetailController@index')->name('Detail');
+Route::get('/detail/{slug}', 'DetailController@index')->name('Detail');
 // Route::get('/checkout', 'CheckoutController@index')->name('Checkout');
 // Route::get('/checkout/succes', 'CheckoutController@succes')->name('Checkout-succes');
 
 Route::prefix('checkout')
     ->group(function () {
-        Route::get('/', 'CheckoutController@index')
-            ->name('Checkout');
+        Route::get('/{id}', 'CheckoutController@index')
+            ->name('Checkout')
+            ->middleware(['auth','verified']);
+
+        Route::post('/{id}', 'CheckoutController@process')
+        ->name('checkout_process')
+        ->middleware(['auth','verified']);
+
+        Route::post('/create/{detail_id}', 'CheckoutController@create')
+        ->name('checkout-create')
+        ->middleware(['auth','verified']);
+
+
+        Route::get('/checkout/remove/{detail_id}', 'CheckoutController@remove')
+        ->name('checkout-remove')
+        ->middleware(['auth','verified']);
+
         Route::get('/succes', 'CheckoutController@succes')
-            ->name('Checkout-succes');
+            ->name('Checkout-succes')
+            ->middleware(['auth','verified']);
     });
 
 // prefix untuk akses url localhost/admin/
@@ -38,6 +54,7 @@ Route::prefix('admin')
         Route::get('/', 'DasboardController@index')
             ->name('dasboard');
         Route::resource('travel-package', 'TravelPackagesController');
+        Route::resource('gallery', 'GalleryController');
+        Route::resource('transaction', 'transactionController');
     });
 Auth::routes(['verify' => true]);
-
