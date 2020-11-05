@@ -17,7 +17,7 @@ class IsAdmin
     public function handle($request, Closure $next)
     {
         //ngecek apakah dia login apa engga , dan ngecek apakah dia admin atau tidak jika iya masuk ke return
-        if (Auth::user() && Auth::user()->roles == 'ADMIN') {
+        if (Auth::user() && Auth::user()->roles == 'USER') {
             return $next($request);
         }
         return redirect('/');
